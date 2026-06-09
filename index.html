@@ -1,0 +1,31 @@
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 12pt; margin: 60px; }
+    h1 { text-align: center; font-size: 16pt; }
+    .section-title { font-weight: bold; margin-top: 20px; }
+    .signature-block { display: flex; justify-content: space-between; margin-top: 60px; }
+    .signature-line { width: 45%; }
+    .signature-line hr { border: 1px solid #000; }
+  </style>
+</head>
+<body>
+  <h1>RETAINER AGREEMENT</h1>
+  <p>This agreement is entered into on <strong>${$('Edit Fields').item.json.date_filed}</strong></p>
+  <p><strong>Attorney:</strong> Kirby Tajanlangit, Esq.</p>
+  <p><strong>Client:</strong> ${$('Edit Fields').item.json.client_full_name}</p>
+  <p><strong>Address:</strong> ${$('Edit Fields').item.json.client_address}</p>
+  <p><strong>Phone:</strong> ${$('Edit Fields').item.json.client_phone}</p>
+  <p><strong>Email:</strong> ${$('Edit Fields').item.json.client_email}</p>
+  <p><strong>Case Type:</strong> ${$('Edit Fields').item.json.case_type}</p>
+  <p><strong>Case Number:</strong> ${$('Edit Fields').item.json.case_number}</p>
+  <p><strong>Court:</strong> ${$('Edit Fields').item.json.court_name}</p>
+  <p><strong>Judge:</strong> ${$('Edit Fields').item.json.judge_name}</p>
+  <p><strong>Opposing Party:</strong> ${$('Edit Fields').item.json.opposing_party}</p>
+  <p><strong>Opposing Counsel:</strong> ${$('Edit Fields').item.json.opposing_counsel}</p>
+</body>
+</html>`;
+
+return [{ json: { html } }];
